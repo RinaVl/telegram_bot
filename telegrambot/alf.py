@@ -11,7 +11,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Токен вашего бота
-TOKEN = "8204225522:AAFU20IFLuRP06bZ8oLBo-89r8Ob-BoUzMQ"
+import os
+TOKEN = os.environ.get('BOT_TOKEN')
 
 # Структура всех продуктов
 CREDIT_PRODUCTS = {
@@ -305,4 +306,5 @@ def main() -> None:
         print(f"❌ Критическая ошибка при запуске бота: {e}")
 
 if __name__ == "__main__":
+
     main()
